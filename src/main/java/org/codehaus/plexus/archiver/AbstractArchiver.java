@@ -363,7 +363,7 @@ public abstract class AbstractArchiver
 
     private boolean isSymlinkSupported()
     {
-        return Os.isFamily( Os.FAMILY_UNIX ) && Java7Reflector.isAtLeastJava7();
+        return (Os.isFamily( Os.FAMILY_UNIX ) || Os.isFamily( Os.FAMILY_WINDOWS )) && Java7Reflector.isAtLeastJava7();
     }
 
     @Override
